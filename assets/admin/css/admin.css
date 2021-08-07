@@ -1,0 +1,1003 @@
+/* General Style */
+
+.smc-addel-settings-wrap {
+  padding: 15px;
+}
+
+.smc-addel-header-bar {
+  height: auto;
+  padding: 10px;
+  background: #fff;
+  -webkit-display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 8px 38px 0px rgba(36, 39, 50, 0.08);
+  box-shadow: 0px 8px 38px 0px rgba(36, 39, 50, 0.08);
+}
+
+.smc-addel-settings-wrap .smc-addel-header-left {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.smc-addel-header-bar .smc-addel-admin-logo-inline {
+  width: 60px;
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+.smc-addel-header-bar .smc-addel-admin-logo-inline img {
+  width: 100%;
+}
+.smc-addel-header-bar .title {
+  font-size: 22px;
+  color: #3f3f3f;
+  font-weight: 500;
+  margin: 0px;
+  line-height: 2.5;
+}
+
+.smc-addel-header-left,
+.smc-addel-header-right {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+.smc-addel-header-right {
+  text-align: right;
+}
+.smc-addel-settings-tabs {
+  padding-top: 10px;
+}
+
+.smc-addel-settings-tab h4 {
+  font-size: 22px;
+}
+
+.smc-addel-settings-tab p {
+  font-size: 13px;
+  color: #707070;
+  margin: 0px 0 20px 0;
+  line-height: 21px;
+}
+
+.smc-addel-settings-tabs ul {
+  width: 100%;
+  height: auto;
+  margin: 25px 0px 0px 0px;
+}
+
+.smc-addel-settings-tabs ul li {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.smc-addel-settings-tabs ul li a {
+  padding: 19px 22px;
+  background: #f8fafb;
+  color: #252525;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 5px;
+  display: block;
+  border-radius: 4px 4px 0 0;
+}
+
+.smc-addel-settings-tabs ul li a img {
+  opacity: 0.6;
+}
+
+.smc-addel-settings-tabs ul li a.active img {
+  opacity: 1;
+}
+
+.smc-addel-settings-tabs ul li a:focus {
+  outline: none;
+  box-shadow: none;
+}
+.smc-addel-settings-tabs ul li a img {
+  width: 18px;
+  margin: 0 15px -3px 0;
+}
+.smc-addel-settings-tab {
+  background: #fff;
+  padding: 15px 25px;
+  border-top: none;
+  position: relative;
+}
+.smc-addel-settings-tabs ul li.ui-tabs-active a {
+  background: #fff;
+  outline: none;
+  box-shadow: none;
+  color: #343434;
+}
+.smc-addel-settings-tabs .col-one-fourth {
+  width: 100%;
+}
+p.smc-addel-el-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #3a3c40;
+  margin: 0.5em;
+}
+.smc-addel-settings-tab p.smc-addel-elements-control-notice {
+  color: #444;
+  font-size: 16px;
+  font-style: italic;
+  padding: 10px;
+}
+.smc-addel-form-control {
+  width: 100%;
+}
+textarea.smc-addel-form-control {
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #5d5d5d;
+}
+.row {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  padding: 15px 0px;
+}
+.col-full {
+  width: 100%;
+  height: auto;
+}
+.col-half {
+  flex-basis: 49%;
+  height: auto;
+  display: flex;
+}
+.col-one-third {
+  width: 32%;
+  height: auto;
+}
+
+.col-one-fourth {
+  width: 25%;
+  height: auto;
+}
+
+/* Checkbox Style */
+.smc-addel-checkbox-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.smc-addel-checkbox {
+  position: relative;
+  display: flex;
+  flex-basis: 350px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  margin: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 5px 18px 0px rgba(0, 4, 32, 0.08);
+}
+
+.smc-addel-setup-body .smc-addel-checkbox {
+  flex-basis: 260px;
+}
+
+.smc-addel-checkbox-quick-tools {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 320px;
+  margin-top: 15px;
+  box-shadow: none;
+  border: 1px solid #eee;
+  padding: 5px 15px;
+  background: #f9f9f9;
+}
+
+.smc-addel-checkbox-quick-tools p.smc-addel-el-title {
+  font-size: 13px;
+  font-weight: 500;
+}
+.smc-addel-settings-tab p.quick-tools-description {
+  padding: 0 0 0 10px;
+  font-style: italic;
+  font-size: 12px;
+}
+.smc-addel-checkbox.checkbox-toggle-all {
+  border-radius: 100px;
+  padding: 12px 25px;
+  flex-basis: 270px;
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.smc-addel-checkbox input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+.smc-addel-checkbox label {
+  width: 48px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+.smc-addel-checkbox label::before {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 24px;
+  left: 2px;
+  transition: background 0.1s 0.1s ease;
+  background: #cbcfd0;
+  border: 1px solid #cbcfd0;
+  border-radius: 50px;
+}
+.smc-addel-checkbox label::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 17px;
+  border-radius: 100%;
+  left: 5px;
+  top: 4px;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 5px #fcfff4 inset;
+  background: #cbcfd0;
+  z-index: 2;
+  animation: switch-off 0.3s ease-out;
+}
+.smc-addel-checkbox input[type="checkbox"]:checked + label::before {
+  background: rgb(122, 180, 22);
+  border: 1px solid rgb(122, 180, 22);
+}
+.smc-addel-checkbox input[type="checkbox"]:checked + label::after {
+  left: 29px;
+  background: #ffffff;
+  animation: switch-on 0.3s ease-out;
+}
+.smc-addel-checkbox.smc-addel-toogle-all
+  input[type="checkbox"]:checked
+  + label::before {
+  background: rgba(246, 0, 139, 1);
+  border: 1px solid rgba(246, 0, 139, 1);
+}
+
+@keyframes switch-on {
+  50% {
+    transform: scaleX(1.3);
+  }
+}
+
+@keyframes switch-off {
+  50% {
+    transform: scaleX(1.3);
+  }
+}
+.smc-addel-checkbox-container input[type="text"] {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
+
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+}
+.smc-addel-checkbox-container input[type="text"]:hover,
+.smc-addel-checkbox-container input[type="text"]:focus {
+  background-color: #f8fafb;
+  color: #333;
+  box-shadow: 0 0 5px rgba(246, 0, 139, 1);
+  border: 1px solid rgba(246, 0, 139, 1);
+}
+/* smc-addel Tab Toggles */
+.smc-addel-settings-tab {
+  display: none;
+}
+.smc-addel-settings-tab.active {
+  display: block;
+}
+.smc-addel-tabs li a.active {
+  background-color: #fff;
+  color: rgb(204, 0, 126);
+}
+.smc-addel-tabs li a:hover,
+.smc-addel-tabs li a.active:hover {
+  color: rgb(246, 0, 139);
+}
+
+/* Footer Style */
+.smc-addel-settings-footer {
+  padding: 20px 25px 15px 25px;
+  background: #fff;
+  margin-top: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.smc-addel-settings-footer .submit {
+  padding: 0px;
+}
+.smc-addel-settings-footer p.submit {
+  margin-top: 0px;
+}
+
+.smc-addel-settings-tab img {
+  max-width: 100%;
+}
+.button.smc-addel-btn {
+  background-color: rgb(122, 180, 22);
+  color: #fff;
+  padding: 6px 20px;
+  border: none;
+  box-shadow: none;
+  font-size: 14px;
+  height: auto;
+  text-transform: uppercase;
+  text-shadow: none;
+  letter-spacing: 0.05em;
+}
+
+.button.smc-addel-btn:hover,
+.button.smc-addel-btn:focus {
+  background-color: rgb(74, 109, 13);
+  color: #fff;
+}
+
+.smc-addel-save-btn-wrap {
+  margin: 30px 0 20px;
+}
+
+.smc-addel-save-btn-wrap .smc-addel-btn {
+  background-color: rgb(122, 180, 22);
+  color: #fff;
+  padding: 10px 20px;
+}
+/*.smc-addel-save-btn-wrap .smc-addel-btn:hover,
+.smc-addel-save-btn-wrap .smc-addel-btn:focus {
+  background-color: rgb(122, 180, 22);
+  color: #fff;
+}*/
+
+.smc-addel-btn.smc-addel-demo-btn {
+  background-color: rgb(159, 0, 124);
+  color: #fff;
+}
+.smc-addel-btn.smc-addel-demo-btn:hover,
+.smc-addel-btn.smc-addel-demo-btn:focus {
+  background-color: rgb(246, 0, 139);
+  color: #fff;
+}
+
+.smc-addel-btn.smc-addel-license-btn {
+  background-color: #0dc9c3;
+}
+.smc-addel-btn.smc-addel-license-btn:hover,
+.smc-addel-btn.smc-addel-license-btn:focus {
+  background-color: #08d1ca;
+}
+.smc-addel-btn.smc-addel-demo-btn,
+.smc-addel-btn.smc-addel-license-btn,
+.smc-addel-btn.smc-addel-review-btn {
+  padding: 10px;
+  display: block;
+  max-width: 250px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 13px;
+}
+#smc-addel-spinner {
+  width: 18px;
+  display: inline-block;
+  float: left;
+  margin: 3px 5px 0 0;
+
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 1.2s;
+  -webkit-animation-name: rotate;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+
+  -moz-transition-property: -moz-transform;
+  -moz-animation-name: rotate;
+  -moz-animation-duration: 1.2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+
+  transition-property: transform;
+  animation-name: rotate;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.smc-addel-notice {
+  background-color: #f7f6d4;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+  max-width: 90%;
+  color: #9a7223;
+}
+
+.smc-addel-notice h5 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.smc-addel-addons-list h4 {
+  font-size: 20px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: rgb(204, 0, 126);
+  margin: 2em 10px 1em;
+  font-weight: 500;
+}
+
+/* Header Button */
+.smc-addel-header-bar .smc-addel-btn,
+.smc-addel-save-btn-wrap .smc-addel-btn {
+  border-radius: 3px;
+  background-image: -moz-linear-gradient(
+    -135deg,
+    rgb(246, 0, 139) 0%,
+    rgb(159, 0, 124) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    -135deg,
+    rgb(246, 0, 139) 0%,
+    rgb(159, 0, 124) 100%
+  );
+  background-image: -ms-linear-gradient(
+    -135deg,
+    rgb(246, 0, 139) 0%,
+    rgb(159, 0, 124) 100%
+  );
+  background-image: linear-gradient(
+    -135deg,
+    rgb(246, 0, 139) 0%,
+    rgb(159, 0, 124) 100%
+  );
+  width: 160px;
+  height: 50px;
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 5, 41, 0.09);
+  -moz-box-shadow: 0px 4px 5px 0px rgba(0, 5, 41, 0.09);
+  box-shadow: 0px 4px 5px 0px rgba(0, 5, 41, 0.09);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.smc-addel-header-bar .smc-addel-btn:hover,
+.smc-addel-header-bar .smc-addel-btn:focus {
+  background-image: -moz-linear-gradient(
+    -135deg,
+    rgba(81, 203, 238, 1) 30%,
+    rgb(3, 112, 227) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    -135deg,
+    rgba(81, 203, 238, 1) 30%,
+    rgb(3, 112, 227) 100%
+  );
+  background-image: -ms-linear-gradient(
+    -135deg,
+    rgba(81, 203, 238, 1) 30%,
+    rgb(3, 112, 227) 100%
+  );
+  background-image: linear-gradient(
+    -135deg,
+    rgba(81, 203, 238, 1) 30%,
+    rgb(3, 112, 227) 100%
+  );
+
+  transition: all 300ms ease-in-out;
+
+  -webkit-box-shadow: 0px 14px 15px 0px rgba(0, 5, 41, 0.08);
+  -moz-box-shadow: 0px 14px 15px 0px rgba(0, 5, 41, 0.08);
+  box-shadow: 0px 14px 15px 0px rgba(0, 5, 41, 0.08);
+}
+.smc-addel-save-btn-wrap .smc-addel-btn.save-now,
+.smc-addel-header-bar .smc-addel-btn.save-now,
+.smc-addel-fb-feed-btn.save-now {
+  background-image: -moz-linear-gradient(
+    -135deg,
+    rgba(81, 203, 238, 1) 30%,
+    rgb(3, 112, 227) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    -135deg,
+    rgba(81, 203, 238, 1) 30%,
+    rgb(3, 112, 227) 100%
+  );
+  background-image: -ms-linear-gradient(
+    -135deg,
+    rgba(81, 203, 238, 1) 30%,
+    rgb(3, 112, 227) 100%
+  );
+  background-image: linear-gradient(
+    -135deg,
+    rgba(81, 203, 238, 1) 30%,
+    rgb(3, 112, 227) 100%
+  );
+
+  transition: all 300ms ease-in-out;
+
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 5, 41, 0.08);
+  -moz-box-shadow: 0px 4px 5px 0px rgba(0, 5, 41, 0.08);
+  box-shadow: 0px 4px 5px 0px rgba(0, 5, 41, 0.08);
+}
+.smc-addel-save-btn-wrap .smc-addel-btn:hover,
+.smc-addel-save-btn-wrap .smc-addel-btn:focus,
+.smc-addel-save-btn-wrap .smc-addel-btn.save-now:hover,
+.smc-addel-header-bar .smc-addel-btn.save-now:hover,
+.smc-addel-fb-feed-btn.save-now:hover {
+  background-image: -moz-linear-gradient(
+    -135deg,
+    rgb(122, 180, 22) 30%,
+    rgb(74, 109, 13) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    -135deg,
+    rgb(122, 180, 22) 30%,
+    rgb(74, 109, 13) 100%
+  );
+  background-image: -ms-linear-gradient(
+    -135deg,
+    rgb(122, 180, 22) 30%,
+    rgb(74, 109, 13) 100%
+  );
+  background-image: linear-gradient(
+    -135deg,
+    rgb(122, 180, 22) 30%,
+    rgb(74, 109, 13) 100%
+  );
+  -webkit-box-shadow: 0px 14px 15px 0px rgba(0, 5, 41, 0.08);
+  -moz-box-shadow: 0px 14px 15px 0px rgba(0, 5, 41, 0.08);
+  box-shadow: 0px 14px 15px 0px rgba(0, 5, 41, 0.08);
+}
+
+.site-button {
+  font-size: 13px;
+  border-radius: 3px;
+  background-image: -moz-linear-gradient(
+    -135deg,
+    rgb(246, 0, 139) 0%,
+    rgb(159, 0, 124) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    -135deg,
+    rgb(246, 0, 139) 0%,
+    rgb(159, 0, 124) 100%
+  );
+  background-image: -ms-linear-gradient(
+    -135deg,
+    rgb(246, 0, 139) 0%,
+    rgb(159, 0, 124) 100%
+  );
+  background-image: linear-gradient(
+    -135deg,
+    rgb(246, 0, 139) 0%,
+    rgb(159, 0, 124) 100%
+  );
+
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 5, 41, 0.09);
+  -moz-box-shadow: 0px 4px 5px 0px rgba(0, 5, 41, 0.09);
+  box-shadow: 0px 4px 5px 0px rgba(0, 5, 41, 0.09);
+  color: #fff !important;
+  display: inline-block;
+  padding: 12px 22px;
+  text-decoration: none;
+  line-height: 1;
+  transition: all 0.3s;
+  cursor: pointer;
+  user-select: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.site-button:hover {
+  -webkit-box-shadow: 0px 14px 15px 0px rgba(0, 5, 41, 0.08);
+  -moz-box-shadow: 0px 14px 15px 0px rgba(0, 5, 41, 0.09);
+  box-shadow: 0px 14px 15px 0px rgba(0, 5, 41, 0.09);
+  background-image: -moz-linear-gradient(
+    -135deg,
+    rgba(81, 203, 238, 1) 30%,
+    rgb(3, 112, 227) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    -135deg,
+    rgba(81, 203, 238, 1) 30%,
+    rgb(3, 112, 227) 100%
+  );
+  background-image: -ms-linear-gradient(
+    -135deg,
+    rgba(81, 203, 238, 1) 30%,
+    rgb(3, 112, 227) 100%
+  );
+  background-image: linear-gradient(
+    -135deg,
+    rgba(81, 203, 238, 1) 30%,
+    rgb(3, 112, 227) 100%
+  );
+}
+
+/* Admin Blocks */
+.smc-addel-admin-general-wrapper {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+}
+.smc-addel-admin-general-wrapper .smc-addel-admin-general-inner {
+  max-width: 70em;
+  height: auto;
+  flex: 1 1 70%;
+}
+.smc-addel-admin-general-wrapper .smc-addel-sidebar {
+  flex: 1 1 200px;
+  padding: 20px;
+}
+.smc-addel-admin-block-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: -10px;
+  width: 100%;
+}
+
+.smc-addel-admin-block-wrapper .smc-addel-admin-block {
+  background-color: #fff;
+  flex: 1 1 auto;
+  min-width: 250px;
+  width: 300px;
+  margin: 10px 10px 25px 10px;
+  -webkit-box-shadow: 0px 8px 38px 0px rgba(36, 39, 50, 0.08);
+  box-shadow: 0px 8px 38px 0px rgba(36, 39, 50, 0.08);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.smc-addel-admin-block-large,
+.smc-addel-sidebar-widget {
+  background: #fff;
+  margin-bottom: 25px;
+  padding: 1em;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+.smc-addel-admin-block-wrapper
+  .smc-addel-admin-block.smc-addel-admin-block-banner {
+  padding: 8px;
+}
+.smc-addel-admin-block-header {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding: 30px 0 0 25px;
+}
+.smc-addel-admin-block-header-icon {
+  height: 40px;
+  width: 40px;
+  background: #fff5f5;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(246, 0, 139, 0.3);
+  border: 1px solid rgba(246, 0, 139, 0.3);
+}
+
+.smc-addel-settings-tab .smc-addel-admin-title {
+  margin: 0.7em 0 1em;
+  padding: 0 1.26582em;
+  font-size: 15px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333333;
+}
+.smc-addel-admin-block-content {
+  overflow: hidden;
+  position: relative;
+  padding: 1em 1.5em 1.5em;
+  background-color: #fff;
+  padding-left: 85px;
+  padding-bottom: 30px;
+  padding-top: 0px;
+}
+.smc-addel-admin-block-banner {
+  overflow: hidden;
+  padding: 0;
+}
+.smc-addel-admin-block-wrapper
+  .smc-addel-admin-block.smc-addel-admin-block-banner {
+  padding: 0;
+}
+.smcstylus-addel-banner {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+.smcstylus-addel-banner:hover {
+  opacity: 0.9;
+  transform: scale(1.2);
+}
+.smc-addel-admin-sidebar {
+  flex: 1 1 200px;
+  padding: 20px;
+}
+.smc-addel-sidebar-block {
+  margin: calc(10% + 1.5em) auto;
+}
+.smc-addel-sidebar-block .smc-addel-admin-sidebar-logo {
+  max-width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+.smc-addel-sidebar-block .smc-addel-admin-sidebar-logo > img,
+.smc-addel-sidebar-block .smc-addel-admin-sidebar-logo > svg {
+  width: 100%;
+  display: block;
+  margin: 10px auto;
+}
+.smc-addel-admin-sidebar-cta {
+  text-align: center;
+}
+.smc-addel-admin-sidebar-cta a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  text-decoration: none;
+  text-align: center;
+  margin: 20px auto;
+  display: inline-block;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 8px 38px 0px rgba(36, 39, 50, 0.08);
+  box-shadow: 0px 8px 38px 0px rgba(36, 39, 50, 0.08);
+  background: #ffffff;
+  padding: 15px 35px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.warning {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+  color: #d8000c;
+  background-color: #ffbaba;
+  overflow: hidden;
+}
+
+.warning > * {
+  float: left;
+}
+#smc-addel_plugins_versions {
+  height: 36px;
+}
+.smc-addel-notice-text {
+  padding-left: 10px;
+}
+.smc-addel-el-title {
+  position: relative;
+}
+
+#toplevel_page_smc-addel-settings.current .wp-menu-image img {
+  opacity: 1;
+}
+
+.smc-addel-admin-block-content a,
+.smc-addel-admin-block-content a:link,
+.smc-addel-admin-block-content a:visited {
+  color: rgb(246, 0, 139);
+}
+.smc-addel-admin-block-content a:hover {
+  color: rgb(159, 0, 124);
+}
+
+.elements-global-control-wrap {
+  text-align: center;
+}
+
+.smc-addel-checkbox-container.elements-global-control-wrap
+  .smc-addel-checkbox.checkbox-toggle-all {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.smc-addel-checkbox-container.elements-global-control-wrap
+  .smc-addel-checkbox
+  label:after {
+  width: 1.8em;
+  height: 1.8em;
+}
+
+.smc-addel-checkbox-container.elements-global-control-wrap
+  .smc-addel-checkbox
+  input[type="checkbox"]:checked
+  + label::after {
+  left: 2.2em;
+}
+
+.smc-addel-checkbox-container.elements-global-control-wrap
+  .smc-addel-checkbox
+  label,
+.smc-addel-checkbox-container.elements-global-control-wrap
+  .smc-addel-checkbox
+  label:before {
+  width: 100px;
+  height: 2em;
+}
+
+.smc-addel-checkbox-container.elements-global-control-wrap
+  .smc-addel-checkbox.checkbox-toggle-all {
+  flex-basis: 150px;
+  padding: 10px 20px 5px;
+}
+.smc-addel-checkbox.smc-addel-toogle-all {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.smc-addel-checkbox .smc-addel-toogle-title {
+  font-size: 1rem;
+}
+.elements-global-control-wrap h4 {
+  font-size: 25px;
+  font-weight: bold;
+  font-style: normal;
+  color: #333333;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.elements-controls-wrap.elements-global-control-wrap p {
+  font-size: 14px;
+  color: #707070;
+}
+
+.smc-addel-btn-group button {
+  border: 0px solid;
+  color: #fff;
+  padding: 13px 25px;
+  border-radius: 3px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 0 3px;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.smc-addel-elements-info {
+  display: flex;
+  align-items: center;
+}
+.smc-addel-elements-info > a.smc-addel-element-info-link {
+  position: relative;
+  width: 18px;
+  display: flex;
+  margin: 0 1px;
+  text-decoration: none;
+  color: #3a3c40;
+  opacity: 0.75;
+  align-items: center;
+  justify-content: center;
+}
+.smc-addel-elements-info > a.smc-addel-element-info-link:hover {
+  opacity: 1;
+}
+.smc-addel-elements-info img,
+.smc-addel-elements-info svg {
+  width: 16px;
+  fill: #3a3c40;
+}
+.smc-addel-element-info-link span.dashicons {
+  font-size: 15px;
+  margin-top: 6px;
+}
+.smc-addel-elements-info .smc-addel-info-tooltip {
+  background-color: #3a3c40;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 5px 15px;
+  border-radius: 40px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  text-transform: uppercase;
+  -webkit-transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.smc-addel-elements-info > a:hover .smc-addel-info-tooltip {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -150%);
+  transform: translate(-50%, -150%);
+}
+
+.smc-addel-elements-info .smc-addel-info-tooltip:after {
+  display: block;
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  content: "";
+  border: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: transparent;
+  border-top-color: #3a3c40;
+  -webkit-transform: translate(-50%, 100%);
+  transform: translate(-50%, 100%);
+}
+
+.smc-addel-admin-inside-select-block {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.smc-addel-admin-select-block-label {
+  flex-basis: 20%;
+  max-width: 20%;
+}
+
+.smc-addel-admin-select-block-select {
+  flex-basis: 70%;
+  max-width: 70%;
+}
+
+.smc-addel-admin-select-block-label h4 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+}
