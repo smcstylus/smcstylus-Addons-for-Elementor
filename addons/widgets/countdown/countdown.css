@@ -26,10 +26,9 @@
   justify-content: center;
   font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
     Cantarell, "Helvetica Neue", sans-serif;
-
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 10px !important;
   font: inherit;
   vertical-align: baseline;
 }
@@ -49,7 +48,7 @@
 
 .smc-addel-countdown--style-theme-one .smc-addel-countdown--timer-time {
   font-family: "Roboto", sans-serif;
-  font-size: 10vw;
+  font-size: calc(10vw / 1.2) !important;
   font-weight: 100;
   letter-spacing: 5px;
   line-height: 1;
@@ -60,11 +59,13 @@
 .smc-addel-countdown--style-theme-one .smc-addel-countdown--timer-label {
   font-weight: 300;
   line-height: 26px;
+
+  font-size: calc(1vw / 0.6) !important;
 }
 .smc-addel-countdown--style-theme-one .smc-addel-countdown--timer::before {
   content: ":";
   font-family: "Roboto", sans-serif;
-  font-size: 10vw;
+  font-size: calc(10vw / 1.2) !important;
   font-weight: 100;
   vertical-align: top;
   letter-spacing: 5px;
@@ -78,9 +79,9 @@
 .smc-addel-countdown--style-theme-one .smc-addel-countdown--timer.days::before {
   content: "";
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 720px) {
   .smc-addel-countdown--style-theme-one .smc-addel-countdown--timer-label {
-    font-size: 80%;
+    font-size: calc(1vw / 0.4) !important;
   }
 }
 
