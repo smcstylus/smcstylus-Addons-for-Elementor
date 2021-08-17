@@ -21,27 +21,48 @@ SMC_Addons_Globals::setGlobal('widgets_list',
       'pro'      => false,
       'class'    => '',
       'css'=>[
-        'countdown'=>[
-          'file'=>'',
-          'ver'=>'',
+        'smcstylus-addel-countdown'=>[
+          'file_name'=>'countdown',
+          'file_url'=>'',
+          'version'=>'',
         ]
       ],
       'js'=>[
-        'countdown'=>[
-          'deps'=>['jquery'],
-          'file'=>'',
-          'ver'=>'',
+        'fix-timers'=>[
+          'file_name'=>'fix-timers',
+          'file_url'=>'',
+          'deps'=>[],
+          'version'=>'1.0.0',
+          'load_in_footer'=>true,
         ],
-        'smcstylusCircleTimers'=>[
+        'jquery-smcstylusCircleTimers'=>[
+          'file_name'=>'jquery.smcstylusCircleTimers',
+          'file_url'=>'',
           'deps'=>['jquery'],
-          'file'=>'',
-          'ver'=>'1',
+          'version'=>'1.0.0',
+          'load_in_footer'=>true,
         ],
-        'jquery.countdown'=>[
+        'jquery-flipper-timers'=>[
+          'file_name'=>'jquery.smcstylusFlipperTimers',
+          'file_url'=>'',
           'deps'=>['jquery'],
-          'file'=>'',
-          'ver'=>'2.2.0',
-        ]
+          'version'=>'1.0.0',
+          'load_in_footer'=>true,
+        ],
+        'jquery-countdown'=>[
+          'file_name'=>'jquery.countdown',
+          'file_url'=>'',
+          'deps'=>['jquery'],
+          'version'=>'2.2.0',
+          'load_in_footer'=>true,
+        ],
+        'smcstylus-addel-countdown'=>[
+          'file_name'=>'countdown',
+          'file_url'=>'',
+          'deps'=>['jquery'],
+          'version'=>'1.3.0',
+          'load_in_footer'=>true,
+        ],
       ],
     ] 
   ]

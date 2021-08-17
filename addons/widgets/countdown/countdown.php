@@ -19,13 +19,15 @@ use SMCstylus_Elementor\Core\Settings\SMC_Addons_Globals;
  * 
  */
 class Countdown extends Widget_Base {
-  private $widget_version = '1.0.0';
+  private $widget_version = '1.3.0';
   private $widget_key = 'countdown';
   private $widget_url = '';
   private $widget_opt = '';
   private $slug_prefix = '';
   private $opt_prefix = '';
   private $textdomain = '';
+  private $css_dependencies = [];
+  private $js_dependencies = [];
   
   public function __construct($data = array(), $args = null){
     parent::__construct($data, $args);
@@ -41,12 +43,24 @@ class Countdown extends Widget_Base {
   
   private function register_assets(){
     // CSS
-    wp_register_style($this->slug_prefix . $this->widget_key, $this->widget_url . $this->widget_key .'/'.$this->widget_key.'.css', $this->widget_version);
+    foreach($this->widget_opt['css'] as $key => $op){
+        $file = ($op['file_url'] === '') ? $this->widget_url . $this->widget_key .'/'.$op['file_name'].'.css' : $op['file_url'];
+        $ver = $op['version'] === '' ? $this->widget_version : $op['version'];
+        array_push($this->css_dependencies, $key);
+        wp_register_style($key, $file, $ver);
+    }
     
     // JS
-    wp_register_script($this->slug_prefix . $this->widget_key, $this->widget_url . $this->widget_key .'/'.$this->widget_key.'.min.js', ['jquery'], $this->widget_version, true);
-    wp_register_script('jquery-countdown', $this->widget_url . $this->widget_key .'/'.'jquery.countdown'.'.min.js', ['jquery'], '1.0.0', true);
-    wp_register_script('jquery-smcstylusCircleTimers', $this->widget_url . $this->widget_key .'/'.'jquery.smcstylusCircleTimers'.'.min.js', ['jquery'], '1.0.0', true);
+    foreach($this->widget_opt['js'] as $key => $op){
+        $file = ($op['file_url'] === '') ? $this->widget_url . $this->widget_key .'/'.$op['file_name'].'.js' : $op['file_url'];
+        $dep = $op['deps'];
+        $ver = $op['version'] === '' ? $this->widget_version : $op['version'];
+        $footer = $op['load_in_footer'] === false ? false : true;
+        
+        array_push($this->js_dependencies, $key);
+        
+        wp_register_script($key, $file, $dep, $ver, $footer);
+    }
   }
   
   public function get_name(){
@@ -75,11 +89,11 @@ class Countdown extends Widget_Base {
   }
 
   public function get_style_depends() { 
-    return [$this->slug_prefix . $this->widget_key];
+    return  $this->css_dependencies;
   }
 
     public function get_script_depends() {
-        return  ['jquery-countdown', 'jquery-smcstylusCircleTimers', $this->slug_prefix . $this->widget_key ];
+        return  $this->js_dependencies;
     }
 
        
@@ -756,6 +770,59 @@ class Countdown extends Widget_Base {
  
         $this->end_controls_section();
     }
+    /** GENERAL - CIRCLE **/
+    private function controlsGeneralTabFlipper(){
+        /* Circle - General Options Section */
+        $this->start_controls_section(
+            'countdown__flipper_general_section',
+            [
+                'label' => esc_html__( 'Flipper Style -  General Options', $this->textdomain ),
+                'condition'=>[
+                    'countdown__display_style'=>'flipper',
+                ],
+            ]
+        );
+        
+        $this->add_control(
+			'countdown__flipper_note',
+			[
+				'label' => __( 'Note', $this->textdomain ),
+				'type' => \Elementor\Controls_Manager::RAW_HTML,
+				'raw' => __( 'Select "test" option will set the countdown for X secconds. Usefull if you want to see the action.', $this->textdomain ),
+			]
+		);
+        
+        $this->add_control(
+            'countdown__flipper_timers_type',
+            [
+                'label'   => esc_html__( 'Environement', $this->textdomain ),
+                'type'    => Controls_Manager::SELECT,
+                'default' => 'dueDate',
+                'options' => [
+                    'dueDate'   => esc_html( 'Countdown', $this->textdomain ),
+                    'clock'   => esc_html__( 'Clock', $this->textdomain ),
+                    'test5'   => esc_html__( 'Test 5 seconds', $this->textdomain ),
+                    'test15'   => esc_html__( 'Test 15 seconds', $this->textdomain ),
+                    'test70'   => esc_html__( 'Test 70 seconds', $this->textdomain ),
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'countdown__flipper_time_template',
+            [
+                'label'   => esc_html__( 'Date & Time Templates', $this->textdomain ),
+                'type'    => Controls_Manager::SELECT,
+                'default' => '1',
+                'options' => [
+                    //'0'   => esc_html( 'd:H:i:s'),
+                    '1'   => esc_html( 'dd:HH:ii:ss'),
+                    '2'   => esc_html__( 'ddd:HH:ii:ss' ),
+                ],
+            ]
+        );
+        $this->end_controls_section();
+    }
     
     /** GENERAL - REGULAR **/
     private function controlsGeneralTabRegular(){
@@ -763,9 +830,9 @@ class Countdown extends Widget_Base {
         $this->start_controls_section(
             'countdown__regular_style_section',
             [
-                'label' => esc_html__( 'Regular Style Options', $this->textdomain ),
+                'label' => esc_html__( 'Flat Style Options', $this->textdomain ),
                 'condition'=>[
-                    'countdown__display_style'=>'regular',
+                    'countdown__display_style'=>'flat',
                 ],
             ]
         );
@@ -1053,7 +1120,7 @@ class Countdown extends Widget_Base {
                 'label' => esc_html__( 'Timers', $this->textdomain ),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition'=>[
-                    'countdown__display_style'=>'regular',
+                    'countdown__display_style'=>'flat',
                 ],
             ]
         );
@@ -1160,7 +1227,7 @@ class Countdown extends Widget_Base {
                 'tab'       => Controls_Manager::TAB_STYLE,
                 'condition' =>[
                     
-                    'countdown__display_style'=>'regular',
+                    'countdown__display_style'=>'flat',
                 ]
             ]
         );
@@ -1263,7 +1330,7 @@ class Countdown extends Widget_Base {
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition'   => [
                     'countdown__hide_labels!' => 'yes',
-                    'countdown__display_style'=>'regular',
+                    'countdown__display_style'=>'flat',
                 ],
             ]
         );
@@ -1373,7 +1440,8 @@ class Countdown extends Widget_Base {
                 'default' => 'circle',
                 'options' => [
                     'circle' => esc_html__( 'Circle', $this->textdomain ),
-                    'regular'  => esc_html__( 'Regular', $this->textdomain ),
+                    'flipper'  => esc_html__( 'Flipper', $this->textdomain ),
+                    'flat'  => esc_html__( 'Flat', $this->textdomain ),
                 ],
                 'label_block'=>true,
             ]
@@ -1394,22 +1462,39 @@ class Countdown extends Widget_Base {
                 ],
             ]
         );
+        // Flipper template
+        $this->add_control(
+            'countdown__template_flipper',
+            [
+                'label'   => esc_html__( 'Flipper Templates', $this->textdomain ),
+                'type'    => Controls_Manager::SELECT,
+                'default' => 'dark',
+                'options' => [
+                    'light'   => esc_html__( 'Light', $this->textdomain ),
+                    'dark'   => esc_html__( 'Dark', $this->textdomain ),
+                    'dark-gradient'   => esc_html__( 'Dark Gradient', $this->textdomain ),
+                ],
+                'condition'   => [
+                    'countdown__display_style' => 'flipper',
+                ],
+            ]
+        );
         // Regular template
         $this->add_control(
-            'countdown__template_regular',
+            'countdown__template_flat',
             [
-                'label'   => esc_html__( 'Regular Templates', $this->textdomain ),
+                'label'   => esc_html__( 'Flat Templates', $this->textdomain ),
                 'type'    => Controls_Manager::SELECT,
                 'default' => 'one',
                 'options' => [
                     'one'   => esc_html__( 'Dark', $this->textdomain ),
                     'two'   => esc_html__( 'Calendar', $this->textdomain ),
-                    'three' => esc_html__( 'Flipper Secconds', $this->textdomain ),
+                    'three' => esc_html__( 'Flip Secconds', $this->textdomain ),
                     'four'  => esc_html__( 'Tick', $this->textdomain ),
                     'five'  => esc_html__( 'Suspended', $this->textdomain ),
                 ],
                 'condition'   => [
-                    'countdown__display_style' => 'regular',
+                    'countdown__display_style' => 'flat',
                 ],
             ]
         );
@@ -1628,6 +1713,9 @@ class Countdown extends Widget_Base {
         // Regular general tab
         $this->controlsGeneralTabRegular();
         
+        // Flipper general tab
+        $this->controlsGeneralTabFlipper();
+        
         
         /*****************     STYLE TAB    ****************/
         // Style Counter Wraper
@@ -1737,14 +1825,16 @@ class Countdown extends Widget_Base {
         $this->controlsStyleTabCircle();
         // Regular style item
         $this->controlsStyleTabRegular();
+        // Flipper 
     }
 
     protected function render( $instance = [] ) {
         $settings = $this->get_settings_for_display();
         $def_date = date( 'Y-m-d H:i',  ( strtotime('3 days')  * HOUR_IN_SECONDS ) );
+        $date       = isset( $settings['countdown__due_date'] ) ? $settings['countdown__due_date'] : $def_date;
         $data_options = [
             'due_date' => [
-                'date'     => isset( $settings['countdown__due_date'] ) ? $settings['countdown__due_date'] : $def_date,
+                'date'     => $date,
                 'action'   => $this->setDefaultSettingsOption($settings['countdown__due_date_action'], 'donothing' ),
                 'redirect' => $this->setDefaultSettingsOption($settings['countdown__due_date_redirect'],'' ),
                 'message'  => $this->setDefaultSettingsOption($settings['countdown__due_date_message'], '' ),
@@ -1755,8 +1845,8 @@ class Countdown extends Widget_Base {
                 'showHours'   => ( 'yes' === $settings['countdown__show_hours'] ),
                 'showMinutes' => ( 'yes' === $settings['countdown__show_minutes'] ),
                 'showSeconds' => ( 'yes' === $settings['countdown__show_seconds'] ),
-                'circleStyle' => ( 'circle' === $settings['countdown__display_style'] ),
             ],
+            'style' => $settings['countdown__display_style'] ,
             'customlabels' => [
                 'days'    => $this->setDefaultSettingsOption( $settings['countdown__custom_label_days'] , esc_html__( 'Days',$this->textdomain )),
                 'hours'   => $this->setDefaultSettingsOption( $settings['countdown__custom_label_hours'] , esc_html__( 'Hours',$this->textdomain )),
@@ -1766,10 +1856,9 @@ class Countdown extends Widget_Base {
         ];
         
         // Circular countdown
-        if( $settings['countdown__display_style'] === 'circle' ){
-
-            $date       = isset( $settings['countdown__due_date'] ) ? $settings['countdown__due_date'] : $def_date;
-            
+        
+        switch($settings['countdown__display_style']){
+            case"circle":
             $free_wheel = $settings['countdown__circleUI_lines_freeWheel'];
             
             $past_line  = ($free_wheel === 'yes' ? $settings['countdown__circleUI_past_lineWidth_freeWheel']['size']: $settings['countdown__circleUI_past_lineWidth']['size']);
@@ -1788,9 +1877,6 @@ class Countdown extends Widget_Base {
             $remaining_line_colors_seconds = $this->calcGradient('countdown__circleUI_remaining_seconds_lineGradient', 'countdown__circleUI_remaining_seconds_lineColor', 'countdown__circleUI_remaining_seconds_lineColor_end', '#f6008b', "rgba(256, 256, 256, 0.7)");
             
             
-            $this->add_render_attribute( 'area_attr', 'data-date', $date.':00' );
-            $this->add_render_attribute( 'area_attr', 'class', 'smc-addel-countdown smc-addel-countdown--style-circle smc-addel-countdown--style-circle-'.$settings['countdown__template_circle'] );
-
             $data_options = array_merge($data_options, [
                 'animation' => [
                     'style'     => $settings['countdown__circleUI_animationStyle'],
@@ -1848,12 +1934,43 @@ class Countdown extends Widget_Base {
                 ],
             ]);
             
-
-        }else{
+            
+            $this->add_render_attribute( 'area_attr', 'class', 'smc-addel-countdown smc-addel-countdown--style-circle smc-addel-countdown--style-circle-'.$settings['countdown__template_circle'] );
+            
+            break;
+            
             // Regular countdown
-                $this->add_render_attribute( 'area_attr', 'class', 'smc-addel-countdown smc-addel-countdown--wrapper smc-addel-countdown--style-theme-'.$settings['countdown__template_regular'] );
+            case"flat":
+                $this->add_render_attribute( 'area_attr', 'class', 'smc-addel-countdown smc-addel-countdown--wrapper smc-addel-countdown--style-flat-'.$settings['countdown__template_flat'] );
+            break;
+            
+            case"flipper":
+                $flipper_date_tpl = [
+                   // ['d','H','i','s'],
+                    ['dd','HH','ii','ss'],
+                    ['ddd','HH','ii','ss'],
+                ];
+                
+                $flipper_date_tpl_selected = $this->setDefaultSettingsOption( $settings['countdown__flipper_time_template'], 1);
+                
+                $data_options = array_merge($data_options, [
+                    'timerType' => $settings['countdown__flipper_timers_type'],
+                    'cssTemplate' => $settings['countdown__template_flipper'],
+                    'timeTemplate' => [
+                        'days' => $flipper_date_tpl[$flipper_date_tpl_selected][0], //dd
+                        'hours' => $flipper_date_tpl[$flipper_date_tpl_selected][1],
+                        'minutes' => $flipper_date_tpl[$flipper_date_tpl_selected][2],
+                        'seconds' => $flipper_date_tpl[$flipper_date_tpl_selected][3],
+                    ],
+                ]);
+    
+                
+                
+                $this->add_render_attribute( 'area_attr', 'class', 'smc-addel-countdown smc-addel-countdown--wrapper smc-addel-countdown--style-flipper-'.$settings['countdown__template_flipper'] );
+            break;
         }
-
+        
+        $this->add_render_attribute( 'area_attr', 'data-date', $date.':00' );
         $this->add_render_attribute( 'area_attr', 'data-countdown', wp_json_encode( $data_options ) );
 
         echo sprintf('<div %1$s></div>', $this->get_render_attribute_string( 'area_attr' ) );

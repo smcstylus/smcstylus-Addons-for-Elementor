@@ -1,12 +1,14 @@
-/***** FLAT *****/
-/* One */
+@charset "UTF-8";
+/******************** FLAT ********************/
+/**********************************************/
+/********* Flat One *********/
 :root {
   --tr-rot0: rotateY(0deg);
   --tr-rot180: rotateY(180deg);
   --tr-rot360: rotateY(360deg);
 }
-.smc-addel-countdown--style-theme-one,
-.smc-addel-countdown--style-theme-one * {
+.smc-addel-countdown--style-flat-one,
+.smc-addel-countdown--style-flat-one * {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -32,11 +34,11 @@
   font: inherit;
   vertical-align: baseline;
 }
-.smc-addel-countdown--style-theme-one {
+.smc-addel-countdown--style-flat-one {
   background-color: #000;
   color: rgba(256, 256, 256, 0.5);
 }
-.smc-addel-countdown--style-theme-one .smc-addel-countdown--timer {
+.smc-addel-countdown--style-flat-one .smc-addel-countdown--timer {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -46,7 +48,7 @@
   display: block;
 }
 
-.smc-addel-countdown--style-theme-one .smc-addel-countdown--timer-time {
+.smc-addel-countdown--style-flat-one .smc-addel-countdown--timer-time {
   font-family: "Roboto", sans-serif;
   font-size: calc(10vw / 1.2) !important;
   font-weight: 100;
@@ -56,13 +58,13 @@
   padding-top: 5%;
   padding-bottom: 0;
 }
-.smc-addel-countdown--style-theme-one .smc-addel-countdown--timer-label {
+.smc-addel-countdown--style-flat-one .smc-addel-countdown--timer-label {
   font-weight: 300;
   line-height: 26px;
 
   font-size: calc(1vw / 0.6) !important;
 }
-.smc-addel-countdown--style-theme-one .smc-addel-countdown--timer::before {
+.smc-addel-countdown--style-flat-one .smc-addel-countdown--timer::before {
   content: ":";
   font-family: "Roboto", sans-serif;
   font-size: calc(10vw / 1.2) !important;
@@ -76,17 +78,17 @@
   margin-left: -25%;
   width: 25%;
 }
-.smc-addel-countdown--style-theme-one .smc-addel-countdown--timer.days::before {
+.smc-addel-countdown--style-flat-one .smc-addel-countdown--timer.days::before {
   content: "";
 }
 @media screen and (max-width: 720px) {
-  .smc-addel-countdown--style-theme-one .smc-addel-countdown--timer-label {
+  .smc-addel-countdown--style-flat-one .smc-addel-countdown--timer-label {
     font-size: calc(1vw / 0.4) !important;
   }
 }
 
-/* Two */
-.smc-addel-countdown--style-theme-two {
+/********* Flat Two *********/
+.smc-addel-countdown--style-flat-two {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -102,7 +104,7 @@
   margin-left: -20px;
 }
 
-.smc-addel-countdown--style-theme-two .smc-addel-countdown--timer {
+.smc-addel-countdown--style-flat-two .smc-addel-countdown--timer {
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 calc(21% - 20px);
   -ms-flex: 1 0 calc(21% - 20px);
@@ -117,7 +119,7 @@
   flex-direction: column;
 }
 
-.smc-addel-countdown--style-theme-two
+.smc-addel-countdown--style-flat-two
   .smc-addel-countdown--timer
   .smc-addel-countdown--timer-time {
   font-family: Roboto;
@@ -131,7 +133,7 @@
   color: #cc3399;
 }
 
-.smc-addel-countdown--style-theme-two
+.smc-addel-countdown--style-flat-two
   .smc-addel-countdown--timer
   .smc-addel-countdown--timer-label {
   font-family: Verdana, sans-serif;
@@ -144,13 +146,13 @@
   height: 100%;
 }
 @media screen and (max-width: 414px) {
-  .smc-addel-countdown--style-theme-two .smc-addel-countdown--timer-time {
+  .smc-addel-countdown--style-flat-two .smc-addel-countdown--timer-time {
     font-size: 40px;
   }
 }
 
-/* Three */
-.smc-addel-countdown--style-theme-three {
+/********* Flat Three *********/
+.smc-addel-countdown--style-flat-three {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -171,7 +173,7 @@
   perspective: 1000;
 }
 
-.smc-addel-countdown--style-theme-three .smc-addel-countdown--timer {
+.smc-addel-countdown--style-flat-three .smc-addel-countdown--timer {
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 calc(21% - 20px);
   -ms-flex: 1 0 calc(21% - 20px);
@@ -195,14 +197,14 @@
   transform-style: preserve-3d;
 }
 
-.smc-addel-countdown--style-theme-three .smc-addel-countdown--timer.seconds {
+.smc-addel-countdown--style-flat-three .smc-addel-countdown--timer.seconds {
   animation-name: flipper-three;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: reverse;
 }
 
-.smc-addel-countdown--style-theme-three
+.smc-addel-countdown--style-flat-three
   .smc-addel-countdown--timer
   .smc-addel-countdown--timer-time {
   font-family: Roboto;
@@ -217,7 +219,7 @@
   background: #f3f3f3;
 }
 
-.smc-addel-countdown--style-theme-three
+.smc-addel-countdown--style-flat-three
   .smc-addel-countdown--timer
   .smc-addel-countdown--timer-label {
   font-family: Verdana, sans-serif;
@@ -230,7 +232,7 @@
   height: 100%;
 }
 @media screen and (max-width: 414px) {
-  .smc-addel-countdown--style-theme-three .smc-addel-countdown--timer-time {
+  .smc-addel-countdown--style-flat-three .smc-addel-countdown--timer-time {
     font-size: 40px;
   }
 }
@@ -251,8 +253,8 @@
   }
 }
 
-/* Four */
-.smc-addel-countdown--style-theme-four {
+/********* Flat Four *********/
+.smc-addel-countdown--style-flat-four {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -269,7 +271,7 @@
   background: transparent;
 }
 
-.smc-addel-countdown--style-theme-four .smc-addel-countdown--timer {
+.smc-addel-countdown--style-flat-four .smc-addel-countdown--timer {
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 calc(21% - 20px);
   -ms-flex: 1 0 calc(21% - 20px);
@@ -284,7 +286,7 @@
   transform-style: preserve-3d;
 }
 
-.smc-addel-countdown--style-theme-four
+.smc-addel-countdown--style-flat-four
   .smc-addel-countdown--timer.seconds
   .smc-addel-countdown--timer-time::before {
   animation-name: flipper-four;
@@ -293,7 +295,7 @@
   animation-direction: reverse;
 }
 
-.smc-addel-countdown--style-theme-four
+.smc-addel-countdown--style-flat-four
   .smc-addel-countdown--timer
   .smc-addel-countdown--timer-time {
   font-family: serif;
@@ -311,7 +313,7 @@
   border: 2px solid #86866488;
   border-radius: 4px;
 }
-.smc-addel-countdown--style-theme-four
+.smc-addel-countdown--style-flat-four
   .smc-addel-countdown--timer.seconds
   .smc-addel-countdown--timer-time::before {
   content: ".";
@@ -327,7 +329,7 @@
   left: 2px;
 }
 
-.smc-addel-countdown--style-theme-four
+.smc-addel-countdown--style-flat-four
   .smc-addel-countdown--timer
   .smc-addel-countdown--timer-label {
   font-family: Verdana, sans-serif;
@@ -339,7 +341,7 @@
   height: 100%;
 }
 @media screen and (max-width: 414px) {
-  .smc-addel-countdown--style-theme-four .smc-addel-countdown--timer-time {
+  .smc-addel-countdown--style-flat-four .smc-addel-countdown--timer-time {
     font-size: 40px;
   }
 }
@@ -352,8 +354,8 @@
   }
 }
 
-/* Five */
-.smc-addel-countdown--style-theme-five {
+/********* Flat Five *********/
+.smc-addel-countdown--style-flat-five {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -373,7 +375,7 @@
   perspective: 1000;
 }
 
-.smc-addel-countdown--style-theme-five .smc-addel-countdown--timer {
+.smc-addel-countdown--style-flat-five .smc-addel-countdown--timer {
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 calc(21% - 20px);
   -ms-flex: 1 0 calc(20% - 20px);
@@ -391,7 +393,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-stroke: 0.5px;
 }
-.smc-addel-countdown--style-theme-five .smc-addel-countdown--timer::after {
+.smc-addel-countdown--style-flat-five .smc-addel-countdown--timer::after {
   content: ".";
   position: absolute;
   width: 100%;
@@ -404,7 +406,7 @@
   transform: blur(0px);
 }
 
-.smc-addel-countdown--style-theme-five
+.smc-addel-countdown--style-flat-five
   .smc-addel-countdown--timer
   .smc-addel-countdown--timer-time {
   font-family: Roboto;
@@ -420,7 +422,7 @@
   background: #f3f3f3;
 }
 
-.smc-addel-countdown--style-theme-five
+.smc-addel-countdown--style-flat-five
   .smc-addel-countdown--timer
   .smc-addel-countdown--timer-label {
   font-family: Verdana, sans-serif;
@@ -434,26 +436,28 @@
   padding: 4px 0;
 }
 @media screen and (max-width: 414px) {
-  .smc-addel-countdown--style-theme-five
+  .smc-addel-countdown--style-flat-five
     .smc-addel-countdown--timer
     .smc-addel-countdown--timer-time {
     font-size: 25px;
   }
-  .smc-addel-countdown--style-theme-five
+  .smc-addel-countdown--style-flat-five
     .smc-addel-countdown--timer
     .smc-addel-countdown--timer-label {
     font-size: 11px;
     padding: 0;
     letter-spacing: -1px;
   }
-  .smc-addel-countdown--style-theme-five .smc-addel-countdown--timer {
+  .smc-addel-countdown--style-flat-five .smc-addel-countdown--timer {
     max-width: 50px;
     border: 2px solid #2da8ef;
     -webkit-text-stroke: 0px;
   }
 }
 
-/***** CIRCLE *****/
+/******************* CIRCLE *******************/
+/**********************************************/
+/********* Circle Base *********/
 .smc-addel-countdown--style-circle .smcstylusCircleTimers {
   position: relative;
 }
@@ -508,6 +512,7 @@
   content: ".";
 }
 
+/********* Circle One *********/
 .smc-addel-countdown--style-circle-one {
   margin: auto;
 }
@@ -523,4 +528,334 @@
 
 .smc-addel-countdown--style-circle-two .smcstylusCircleTimers div span::after {
   content: "";
+}
+
+/******************* FLIPPER ******************/
+/**********************************************/
+/********* Flipper Base *********/
+.flipper {
+  color: #333;
+  display: block;
+  font-family: sans-serif;
+  font-size: 50px;
+  line-height: 100%;
+  padding: 0;
+  margin: 0;
+  height: 1.7em;
+}
+.flipper.flipper-invisible {
+  font-size: 0px !important;
+}
+
+.flipper-group {
+  position: relative;
+  white-space: nowrap;
+  display: block;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+.flipper-group label {
+  position: absolute;
+  color: #fff;
+  font-size: 20%;
+  top: 100%;
+  line-height: 1em;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  text-align: center;
+  padding-top: 0.5em;
+}
+
+.flipper-digit {
+  white-space: nowrap;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  float: left;
+  height: 1.2em;
+  overflow-y: hidden;
+}
+.flipper-digit span {
+  font-size: 25%;
+}
+
+.flipper-delimiter {
+  white-space: nowrap;
+  display: block;
+  float: left;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  min-width: 0.1em;
+  white-space: nowrap;
+  display: block;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  line-height: 1em;
+}
+
+.digit-face {
+  display: block;
+  visibility: hidden;
+  position: relative;
+  border-radius: 0.1em;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 8;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.digit-next {
+  display: block;
+  position: relative;
+  border-radius: 0.1em;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 8;
+  height: 1.2em;
+  background: #fff;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.digit-top {
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  pointer-events: none;
+  overflow: hidden;
+  position: absolute;
+  background: #fff;
+  padding-top: 0.1em;
+  padding-bottom: 0;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  border-top-left-radius: 0.1em;
+  border-top-right-radius: 0.1em;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: background 0s linear, -webkit-transform 0s linear;
+  transition: transform 0s linear, background 0s linear;
+  transition: transform 0s linear, background 0s linear,
+    -webkit-transform 0s linear;
+  -webkit-transform-origin: 0 0.6em 0 !important;
+  transform-origin: 0 0.6em 0 !important;
+  -webkit-transform-style: preserve-3d !important;
+  transform-style: preserve-3d !important;
+  z-index: 20;
+}
+.digit-top.r {
+  transition: background 0.2s linear, -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear, background 0.2s linear;
+  transition: transform 0.2s linear, background 0.2s linear,
+    -webkit-transform 0.2s linear;
+  -webkit-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  background: #cccccc;
+}
+
+.digit-top2 {
+  visibility: hidden;
+  position: absolute;
+  height: 50%;
+  left: 0;
+  right: 0;
+  background: #cccccc;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+  line-height: 0em !important;
+  top: 50% !important;
+  bottom: auto !important;
+  padding-top: 0;
+  padding-bottom: 0.1em;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  border-bottom-left-radius: 0.1em;
+  border-bottom-right-radius: 0.1em;
+  overflow: hidden;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: background 0s linear, -webkit-transform 0s linear;
+  transition: transform 0s linear, background 0s linear;
+  transition: transform 0s linear, background 0s linear,
+    -webkit-transform 0s linear;
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-style: preserve-3d !important;
+  transform-style: preserve-3d !important;
+  -webkit-transform-origin: 0 0 0 !important;
+  transform-origin: 0 0 0 !important;
+  z-index: 20;
+}
+.digit-top2.r {
+  visibility: visible;
+  transition: background 0.2s linear 0.2s, -webkit-transform 0.2s linear 0.2s;
+  transition: transform 0.2s linear 0.2s, background 0.2s linear 0.2s;
+  transition: transform 0.2s linear 0.2s, background 0.2s linear 0.2s,
+    -webkit-transform 0.2s linear 0.2s;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  background: #fff;
+}
+
+.digit-bottom {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  overflow: hidden;
+  background: #fff;
+  height: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  line-height: 0em;
+  padding-top: 0;
+  padding-bottom: 0.1em;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  border-bottom-left-radius: 0.1em;
+  border-bottom-right-radius: 0.1em;
+  box-sizing: border-box;
+  text-align: center;
+  transition: none;
+}
+.digit-bottom.r {
+  transition: background 0.2s linear;
+  background: #cccccc;
+}
+
+.flipper-digit:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.5);
+  top: 50%;
+  display: block;
+  z-index: 30;
+  left: 0;
+  right: 0;
+}
+
+/********* Flipper Dark *********/
+.flipper-dark {
+  color: #fff;
+}
+.flipper-dark .flipper-delimiter {
+  color: #333;
+}
+.flipper-dark .digit-next {
+  background: #333;
+}
+.flipper-dark .digit-top {
+  background: #333;
+}
+.flipper-dark .digit-top.r {
+  background: black;
+}
+.flipper-dark .digit-top2 {
+  background: black;
+}
+.flipper-dark .digit-top2.r {
+  background: #333;
+}
+.flipper-dark .digit-bottom {
+  background: #333;
+}
+
+.flipper-dark .flipper-group label {
+  color: #333;
+}
+
+/********* Flipper Dark Gradient *********/
+.flipper-dark-gradient {
+  color: #fff;
+}
+.flipper-dark-gradient .flipper-digit {
+  box-shadow: 4px 0px 6px rgba(255, 255, 255, 0.3),
+    -4px 0px 6px rgba(255, 255, 255, 0.3);
+}
+.flipper-dark-gradient .flipper-digit:after {
+  font-family: sans;
+  content: "• •";
+  color: #000;
+  text-shadow: 1px 1px #ffffff55;
+  font-size: 0.6em;
+  line-height: 0;
+  position: absolute;
+  text-align: center;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.5);
+  top: 50%;
+  display: block;
+  z-index: 30;
+  left: 0;
+  right: 0;
+}
+.flipper-dark-gradient,
+.flipper-dark-gradient .digit-face,
+.flipper-dark-gradient .digit-top,
+.flipper-dark-gradient .digit-top2,
+.flipper-dark-gradient .digit-next,
+.flipper-dark-gradient .digit-bottom {
+  border-radius: 0.04em;
+  color: #ffffffee;
+}
+.flipper-dark-gradient .flipper-delimiter {
+  color: #333;
+}
+.flipper-dark-gradient .digit-next {
+  background-image: linear-gradient(to left top, #333, #333, #333, #6d6c6c);
+}
+.flipper-dark-gradient .digit-top {
+  background-image: linear-gradient(to left top, #333, #333, #333, #6d6c6c);
+}
+.flipper-dark-gradient .digit-top.r {
+  background: black;
+}
+.flipper-dark-gradient .digit-top2 {
+  background: black;
+}
+.flipper-dark-gradient .digit-top2.r {
+  background: #333;
+}
+.flipper-dark-gradient .digit-bottom {
+  background: #333;
+}
+
+.flipper-dark-gradient .flipper-group label {
+  color: #333;
 }
