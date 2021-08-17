@@ -1,4 +1,4 @@
-Note before start: selecting the branch you select the version, "main" being the first relase. 
+<b>Note before start: selecting the branch you select the version, "main" being the first relase.</b> <br><br>
 I'm not a fan of page builders for WP, but I needed to use Elementor. Before I used Divi and WP Backery. So in order to understand more about Elementor, how the addons are working, I started bulding this plugin. <br>
 For the moment, <b>SMCstylus Addons for Elementor</b> have 2 extensions and just 1 cool addon.
 <ul>
@@ -20,7 +20,7 @@ With the use of <b>Countdown widget</b> you can create beautiful circle countdow
 <br>
 Version 1.0.0:<br>
 - Extensions: CSS box for the free version of Elementor, JS box<br>
-- Widgets: Countdown - circle and flat style
+- Widgets: Countdown - circle and flat style<br>
 Version 1.1.0<br>
 - Widgets: Countdown - added flipper style 
 <br>
